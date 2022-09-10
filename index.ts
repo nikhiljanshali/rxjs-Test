@@ -2,7 +2,16 @@ import './style.css';
 // import { of } from 'rxjs';
 // import { tap, map, mergeMap, toArray } from 'rxjs/operators';
 
-import { of, map, Observable, tap, mergeMap, toArray, interval } from 'rxjs';
+import {
+  of,
+  map,
+  Observable,
+  tap,
+  mergeMap,
+  toArray,
+  interval,
+  iif,
+} from 'rxjs';
 
 of('Nikhil')
   .pipe(map((name) => `Hello, ${name}!`))
@@ -98,7 +107,7 @@ console.log('=============================');
  * Test 4
  */
 
-const r$ = of(4);
+const r$ = of('Y');
 const x$ = of('X');
 // interval(1000)
 //   .pipe(mergeMap((v) => iif(() => v % 4 === 0, r$, x$)))
